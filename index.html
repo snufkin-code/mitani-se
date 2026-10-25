@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="sv" data-lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mitani Advisory and Invest AB – strategisk rådgivning till styrelser och ledningar, med stöd av modern teknik.">
+<meta property="og:title" content="Mitani Advisory and Invest">
+<meta property="og:description" content="Strategisk rådgivning till styrelser och ledningar, med stöd av modern teknik.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mitani.se/">
+<link rel="canonical" href="https://mitani.se/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231B3A2C'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='36' font-weight='600' fill='%23F1F5F0'%3EM%3C/text%3E%3Ccircle cx='50' cy='46' r='3.5' fill='%23B08A4E'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#F6F3EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141916" media="(prefers-color-scheme: dark)">
+<title>Mitani Advisory and Invest</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+/* Layout: editorial two-column grid on wide screens (label rail left, content right, hairline rule across each row);
+   stacks to one column under 760px. Flat washi paper, hairlines, one gold accent. */
+:root{
+  --paper:#F6F3EC; --paper-sunken:#EEEADF; --line:#E2DCCD; --line-strong:#CFC7B3;
+  --ink:#1B211C; --ink-2:#4A5049; --ink-3:#7B8074;
+  --forest:#1B3A2C; --on-forest:#F1F5F0; --gold:#B08A4E; --gold-strong:#8F6A34;
+  --link:#234B39; --link-hover:#14291F; --ring:0 0 0 3px rgba(46,96,73,.45);
+  --serif:'Zen Old Mincho','Times New Roman',Georgia,serif;
+  --sans:'Zen Kaku Gothic New',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  --ease:cubic-bezier(.2,.6,.2,1);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141916; --paper-sunken:#0F1411; --line:#2A322C; --line-strong:#3A443D;
+    --ink:#ECEBE4; --ink-2:#B8BBB2; --ink-3:#858A80;
+    --link:#8FBBA4; --link-hover:#C1D8CB; --ring:0 0 0 3px rgba(143,187,164,.45);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141916; --paper-sunken:#0F1411; --line:#2A322C; --line-strong:#3A443D;
+  --ink:#ECEBE4; --ink-2:#B8BBB2; --ink-3:#858A80;
+  --link:#8FBBA4; --link-hover:#C1D8CB; --ring:0 0 0 3px rgba(143,187,164,.45);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:1.0625rem;line-height:1.72;-webkit-font-smoothing:antialiased}
+h1{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.02em;margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.15em;text-decoration-color:color-mix(in oklab,currentColor 35%,transparent);transition:color .12s var(--ease)}
+a:hover{color:var(--link-hover);text-decoration-color:currentColor}
+:focus-visible{outline:none;box-shadow:var(--ring);border-radius:2px}
+
+[lang-en]{display:none}
+html[data-lang="en"] [lang-sv]{display:none}
+html[data-lang="en"] [lang-en]{display:revert}
+
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* header */
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:26px;border-bottom:1px solid var(--line)}
+.wordmark{display:inline-flex;line-height:1;text-decoration:none;color:var(--ink)}
+.wordmark .wm{font-weight:600;font-size:1.25rem;letter-spacing:.26em;text-indent:.26em;text-transform:uppercase}
+.wordmark .wm b{color:var(--gold);font-weight:600}
+.lang{display:inline-flex;border:1px solid var(--line-strong);border-radius:2px;overflow:hidden}
+.lang button{appearance:none;border:0;background:transparent;color:var(--ink-3);font-family:var(--sans);font-size:.72rem;letter-spacing:.12em;padding:6px 10px;cursor:pointer;transition:background .12s var(--ease),color .12s var(--ease)}
+.lang button[aria-pressed="true"]{background:var(--forest);color:var(--on-forest)}
+.lang button:not([aria-pressed="true"]):hover{background:var(--paper-sunken);color:var(--ink)}
+
+/* rows */
+.row{display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px 64px;padding-block:72px;border-bottom:1px solid var(--line)}
+.row>*{min-width:0}
+.row.hero{padding-block:112px 96px}
+.row:last-of-type{border-bottom:0}
+.lab{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);padding-top:.4em}
+
+h1{font-size:clamp(2.2rem,5vw,4.2rem);max-width:24ch}
+.lede{font-size:clamp(1.15rem,1.6vw,1.35rem);line-height:1.6;color:var(--ink-2);max-width:60ch;margin-top:32px}
+.note{margin-top:36px;font-family:var(--sans);font-size:.9rem;letter-spacing:.02em;color:var(--ink-3);border-left:2px solid var(--gold);padding-left:14px;line-height:1.5}
+.prose{max-width:62ch;font-size:1.15rem;line-height:1.7}
+.prose p+p{margin-top:1em}
+.email{font-family:var(--mono);font-size:1.3rem}
+.who{margin-top:10px;color:var(--ink-2);font-size:1.05rem}
+
+/* footer */
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:36px 56px;font-family:var(--sans);font-size:.8rem;line-height:1.7;color:var(--ink-2);display:grid;grid-template-columns:220px minmax(0,1fr) minmax(0,1.2fr);gap:24px 64px}
+footer .wrap>*{min-width:0}
+footer .fname{font-family:var(--serif);font-size:1rem;color:var(--ink);letter-spacing:.02em}
+footer dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 16px}
+footer dt{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);padding-top:4px;white-space:nowrap}
+footer dd{margin:0}
+footer .mono{font-family:var(--mono);font-size:.78rem}
+footer .legal{color:var(--ink-3);font-size:.76rem}
+footer .legal p+p{margin-top:.6em}
+
+@media (max-width:760px){
+  .row,footer .wrap{grid-template-columns:minmax(0,1fr);gap:20px}
+  .row{padding-block:48px}
+  .row.hero{padding-block:56px 48px}
+  .lab{padding-top:0}
+  .prose{font-size:1.05rem}
+  footer .wrap{gap:28px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="wordmark" href="#" aria-label="Mitani">
+      <span class="wm">Mitani<b>.</b></span>
+    </a>
+    <div class="lang" role="group" aria-label="Språk / Language">
+      <button type="button" id="lang-sv" data-lang="sv" aria-pressed="true">SV</button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="row hero">
+    <div class="lab"><span lang-sv>Rådgivning</span><span lang-en>Advisory</span></div>
+    <div>
+      <h1><span lang-sv>Strategisk rådgivning med stöd av modern teknik.</span><span lang-en>Strategic advice, supported by modern technology.</span></h1>
+      <p class="lede">
+        <span lang-sv>Mitani Advisory and Invest hjälper styrelser och ledningar att fatta välgrundade beslut. Arbetet bygger på mångårig erfarenhet från ledning och styrelse, och på över tio års praktiskt arbete med dataanalys och AI.</span>
+        <span lang-en>Mitani Advisory and Invest helps boards and management teams make well-founded decisions. The work draws on many years of executive and board experience, and on more than a decade of hands-on work in data analysis and AI.</span>
+      </p>
+      <p class="note">
+        <span lang-sv>Uppdrag åtas selektivt och förutsätter godkännande från huvudarbetsgivaren.</span>
+        <span lang-en>Engagements are taken on selectively and are subject to approval by the principal employer.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="lab"><span lang-sv>Om Jakob Mitani</span><span lang-en>About Jakob Mitani</span></div>
+    <div class="prose">
+      <p lang-sv>Ansvarig för finans, strategi samt dataanalys och AI inom Holmens energiverksamhet, och styrelseledamot i Energiforsk. Tidigare erfarenhet från energibranschen genom Nordic Green Energy och Tibber.</p>
+      <p lang-en>Responsible for finance, strategy, data analysis and AI within Holmen's energy business, and board member of Energiforsk. Previous experience in the energy sector at Nordic Green Energy and Tibber.</p>
+    </div>
+  </section>
+
+  <section class="row">
+    <div class="lab"><span lang-sv>Kontakt</span><span lang-en>Contact</span></div>
+    <div>
+      <p class="email"><a href="mailto:jakob@mitani.se">jakob@mitani.se</a></p>
+      <p class="who">Jakob Mitani</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fname">Mitani Advisory and Invest AB</div>
+    <dl>
+      <dt>Org.nr</dt><dd class="mono">559403-6039</dd>
+      <dt lang-sv>Momsreg.nr</dt><dt lang-en>VAT no.</dt><dd class="mono">SE559403603901</dd>
+      <dt lang-sv>Säte</dt><dt lang-en>Registered office</dt><dd>Stockholm</dd>
+      <dt lang-sv>Postadress</dt><dt lang-en>Address</dt><dd>Lugnets Allé 41<br>120 65 Stockholm</dd>
+      <dt lang-sv>E-post</dt><dt lang-en>Email</dt><dd>jakob@mitani.se</dd>
+    </dl>
+    <div class="legal">
+      <p lang-sv>Sekretess och skydd av personuppgifter är en självklar del av arbetet. Godkänd för F-skatt. Webbplatsen använder inga kakor. Personuppgifter i e-post behandlas endast för att besvara förfrågan; Mitani Advisory and Invest AB är personuppgiftsansvarig.</p>
+      <p lang-en>Confidentiality and the protection of personal data are integral to the work. Registered for Swedish F-tax. This website uses no cookies. Personal data in email is processed only to answer the enquiry; Mitani Advisory and Invest AB is the controller.</p>
+      <p>© <span id="year">2026</span> Mitani Advisory and Invest AB</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l){
+    root.setAttribute('data-lang',l);root.setAttribute('lang',l);
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.lang===l));});
+  }
+  setLang('sv');
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});
+  document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+
+</body>
+</html>
